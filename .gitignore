@@ -1,0 +1,19 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+*.tmp
+/output*.csv
+graphify-out/
+data/cache/*
+reports/eval_test.csv
+~$*
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+# local files
+docs/
+reports/eval_summary.md
+reports/model_diagnosis.md
