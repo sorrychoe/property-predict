@@ -186,9 +186,9 @@ $$
 
 **같은 건물 잔차.** 최근 3년 같은 지번 거래($B$)를 이웃 잔차 쪽으로 당겨 평균합니다.
 
-$$
+```math
 r_B = \begin{cases} \dfrac{\sum_{j\in B} r_j + k_b\, r_N}{n_B + k_b} & n_B > 0 \\[2mm] r_N & n_B = 0 \end{cases}
-$$
+```
 
 **최종 추정가.**
 
