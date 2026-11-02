@@ -76,16 +76,16 @@ python predict.py --input input.csv --output output.csv
 
 #### (1) 목표 변수
 
-$$
+```math
 y_i = \ln\left(\frac{P_i}{A_i}\right)
-$$
+```
 
 - $P_i$: 거래 $i$의 거래금액(원), $A_i$: 전용면적(㎡). 즉 **㎡당 가격의 로그**입니다.
 - 로그를 쓰는 이유: 가격은 면적 × 단가 × 할인율처럼 곱셈 구조이므로, 로그를 취하면 각 효과가 "몇 % 비싸다/싸다"로 더해지고 오차도 비율로 다룰 수 있습니다.
 
 #### (2) 회귀식
 
-$$
+```math
 \begin{aligned}
 y_i - \bar y =\;& \sum_{d} \delta_d D_{id}
  + \beta_1 a_i + \beta_2 a_i^2 + \beta_3 \mathbb{1}[A_i < 20] \\
@@ -94,7 +94,7 @@ y_i - \bar y =\;& \sum_{d} \delta_d D_{id}
 &+ \beta_{10} R_i + \beta_{11} s_i + \beta_{12} s_i^2
  + \sum_{c}\sum_{q=0}^{19} \tau_{c,q}\, T_{i,c,q} + \varepsilon_i
 \end{aligned}
-$$
+```
 
 | 기호 | 변수 | 정의 |
 |---|---|---|
